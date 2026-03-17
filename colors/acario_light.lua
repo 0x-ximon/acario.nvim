@@ -1,26 +1,34 @@
-local colors = {
+---@class Palette
+local palette = {
     bg = "#F5F5F9",
-    bg_alt = "#E9E9F2",
-    base0 = "#D0D0E3",
-    base1 = "#D0D0E3",
-    base2 = "#C0CCD0",
-    base3 = "#9EA6B0",
-    base4 = "#585C6C",
-    base5 = "#4E4E4E",
-    base6 = "#3A3A3A",
-    base7 = "#303030",
-    base8 = "#1E1E33",
     fg = "#0F1019",
-    fg_alt = "#0D0E16",
+    selection = "#DEEAF8",
+    comment = "#4E4E4E",
+    orange = "#D75F00",
+
+    -- ANSI
+    black = "#1E1E33",
     red = "#D70000",
     green = "#005F00",
     yellow = "#AF8700",
-    blue = "#1F55A0",
-    magenta = "#AF005F",
+    purple = "#1F55A0",
+    pink = "#AF005F",
     cyan = "#007687",
-    orange = "#D75F00",
-    teal = "#009B7C",
-    violet = "#8700AF",
+    white = "#D0D0E3",
+
+    -- Bright variants
+    bright_red = "#D70000",
+    bright_green = "#005F00",
+    bright_yellow = "#AF8700",
+    bright_blue = "#1F55A0",
+    bright_magenta = "#8700AF",
+    bright_cyan = "#007687",
+    bright_white = "#0D0E16",
+
+    menu = "#E9E9F2",
+    visual = "#C0CCD0",
+    gutter_fg = "#585C6C",
+    nontext = "#D0D0E3",
 }
 
 vim.cmd("hi clear")
@@ -30,28 +38,26 @@ end
 vim.o.background = "light"
 vim.g.colors_name = "acario_light"
 
-local highlights = {
-    Normal = { fg = colors.fg, bg = colors.bg },
-    LineNr = { fg = colors.base4 },
-    CursorLineNr = { fg = colors.orange, bold = true },
-    Comment = { fg = colors.base5, italic = true },
-    Constant = { fg = colors.magenta },
-    String = { fg = colors.green },
-    Function = { fg = colors.yellow },
-    Statement = { fg = colors.red },
-    Type = { fg = colors.blue },
-    Identifier = { fg = colors.cyan },
-    Visual = { bg = colors.base2 },
-
-    -- Dashboard Highlights
-    AlphaHeader = { fg = colors.blue },
-    DashboardHeader = { fg = colors.blue },
+local h = {
+    Normal = { fg = palette.fg, bg = palette.bg },
+    LineNr = { fg = palette.gutter_fg },
+    CursorLineNr = { fg = palette.orange, bold = true },
+    Comment = { fg = palette.comment, italic = true },
+    Constant = { fg = palette.pink },
+    String = { fg = palette.green },
+    Function = { fg = palette.yellow },
+    Statement = { fg = palette.red },
+    Type = { fg = palette.purple },
+    Identifier = { fg = palette.cyan },
+    Visual = { bg = palette.visual },
+    NonText = { fg = palette.nontext },
+    Pmenu = { fg = palette.fg, bg = palette.menu },
 
     -- Treesitter
-    ["@variable"] = { fg = colors.cyan },
+    ["@variable"] = { fg = palette.cyan },
     ["@keyword"] = { link = "Statement" },
 }
 
-for group, settings in pairs(highlights) do
+for group, settings in pairs(h) do
     vim.api.nvim_set_hl(0, group, settings)
 end

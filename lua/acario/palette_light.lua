@@ -1,4 +1,4 @@
----@class PaletteAcarioLight
+---@class Palette
 return {
     bg = "#F5F5F9",
     fg = "#0F1019",

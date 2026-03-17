@@ -13,7 +13,7 @@ local tbl_deep_extend = vim.tbl_deep_extend
 ---@field theme? string?
 ---@field overrides? HighlightGroups | fun(colors: Palette): HighlightGroups
 local DEFAULT_CONFIG = {
-    italic_comment = false,
+    italic_comment = true,
     transparent_bg = false,
     show_end_of_buffer = false,
     lualine_bg_color = nil,
@@ -36,8 +36,8 @@ local function apply_term_colors(colors)
     g.terminal_color_1 = colors.red
     g.terminal_color_2 = colors.green
     g.terminal_color_3 = colors.yellow
-    g.terminal_color_4 = colors.purple
-    g.terminal_color_5 = colors.pink
+    g.terminal_color_4 = colors.blue
+    g.terminal_color_5 = colors.magenta
     g.terminal_color_6 = colors.cyan
     g.terminal_color_7 = colors.white
     g.terminal_color_8 = colors.selection
@@ -97,6 +97,7 @@ local user_configs = {}
 local function get_configs()
     local configs = DEFAULT_CONFIG
 
+    -- BUG: Theme breaks when splitting windows on dark mode
     if g.colors_name == "acario_dark" then
         o.background = "dark"
         configs.theme = "acario_dark"

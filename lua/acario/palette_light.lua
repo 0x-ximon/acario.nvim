@@ -11,8 +11,8 @@ return {
     red = "#D70000",
     green = "#005F00",
     yellow = "#AF8700",
-    purple = "#1F55A0",
-    pink = "#AF005F",
+    blue = "#1F55A0",
+    magenta = "#AF005F",
     cyan = "#007687",
     white = "#D0D0E3",
 

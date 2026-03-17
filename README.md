@@ -24,3 +24,7 @@ return {
     end,
 }
 ```
+
+## Credits
+
+This colorscheme is inspired by the Emacs Doom Acario Theme and is a fork of the [Dracula.nvim](https://github.com/Mofiqul/dracula.nvim) colorscheme.

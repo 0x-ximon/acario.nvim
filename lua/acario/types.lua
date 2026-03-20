@@ -1,0 +1,19 @@
+---@class Palette
+---@field bg string
+---@field fg string
+---@field black string
+---@field red string
+---@field green string
+---@field yellow string
+---@field blue string
+---@field magenta string
+---@field cyan string
+---@field white string
+---@field bright_black string
+---@field bright_red string
+---@field bright_green string
+---@field bright_yellow string
+---@field bright_blue string
+---@field bright_magenta string
+---@field bright_cyan string
+---@field bright_white string

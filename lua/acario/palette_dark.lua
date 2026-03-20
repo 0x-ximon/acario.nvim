@@ -1,10 +1,13 @@
----@class Palette
-return {
+---@type Palette
+local P = {
     bg = "#0D0E16",
     fg = "#CEDBE5",
-    selection = "#0C213E",
+
+    menu = "#161722",
+    visual = "#1E1E33",
+    gutter_fg = "#585C6C",
+    nontext = "#121212",
     comment = "#767676",
-    orange = "#D85F00",
 
     -- ANSI
     black = "#0F1019",
@@ -17,6 +20,7 @@ return {
     white = "#D0D0D0",
 
     -- Bright variants
+    bright_black = "#0C213E",
     bright_red = "#D83441",
     bright_green = "#79D836",
     bright_yellow = "#D8B941",
@@ -25,8 +29,8 @@ return {
     bright_cyan = "#36D8BD",
     bright_white = "#E5F4FF",
 
-    menu = "#161722",
-    visual = "#1E1E33",
-    gutter_fg = "#585C6C",
-    nontext = "#121212",
+    -- Extra colors
+    orange = "#D85F00",
 }
+
+return P

@@ -23,6 +23,8 @@ function M.load(theme)
     for group, setting in pairs(highlights) do
         vim.api.nvim_set_hl(0, group, setting)
     end
+
+    vim.opt.guicursor = "n-c:block-Cursor,i-ci:ver25-Cursor,v-ve:block-Cursor,r-cr-o:hor20-Cursor"
 end
 
 return M

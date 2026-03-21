@@ -12,10 +12,14 @@ function M.load(colors)
         String = { fg = colors.green },
         Keyword = { fg = colors.red },
         Function = { fg = colors.yellow },
+        Variable = { fg = colors.cyan },
         Identifier = { fg = colors.cyan },
         Constant = { fg = colors.blue },
         Include = { fg = colors.magenta },
         Number = { fg = colors.fg },
+
+        Cursor = { fg = colors.bg, bg = colors.cursor },
+        TermCursor = { fg = colors.bg, bg = colors.cursor },
 
         ["@type"] = { fg = colors.blue },
         ["@type.builtin"] = { fg = colors.blue },
@@ -30,10 +34,14 @@ function M.load(colors)
         ["@method.call"] = { fg = colors.fg },
 
         ["@variable"] = { fg = colors.cyan },
-        ["@variable.builtin"] = { fg = colors.cyan },
         ["@variable.member"] = { fg = colors.fg },
+        ["@variable.builtin"] = { fg = colors.cyan },
+        ["@variable.parameter"] = { fg = colors.cyan },
 
         ["@string.escape"] = { link = "String" },
+
+        ["@punctuation.delimiter"] = { fg = colors.fg },
+        ["@punctuation.bracket"] = { fg = colors.fg },
     }
 end
 
@@ -80,8 +88,6 @@ return M
 --         -- ["@parameter"] = { fg = colors.fg },
 --         -- ["@property"] = { fg = colors.magenta },
 --         -- ["@error"] = { fg = colors.bright_red },
---         -- ["@punctuation.delimiter"] = { fg = colors.fg },
---         -- ["@punctuation.bracket"] = { fg = colors.fg },
 --
 --         -- Normal = { fg = colors.fg, bg = colors.bg },
 --         -- NormalFloat = { fg = colors.fg, bg = colors.bg },

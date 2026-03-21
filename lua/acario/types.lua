@@ -1,6 +1,9 @@
 ---@class Palette
 ---@field bg string
 ---@field fg string
+---@field cursor string
+---@field comment string
+---
 ---@field black string
 ---@field red string
 ---@field green string

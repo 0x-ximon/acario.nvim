@@ -43,6 +43,31 @@ function M.load(colors)
 
         ["@punctuation.delimiter"] = { fg = colors.fg },
         ["@punctuation.bracket"] = { fg = colors.fg },
+
+        -- ---------------------------------------------------------------
+        --                             MODULES
+        -- ---------------------------------------------------------------
+
+        -- SnacksDashboard
+        SnacksDashboardHeader = { fg = colors.blue },
+        SnacksDashboardIcon = { fg = colors.blue },
+        SnacksDashboardKey = { fg = colors.blue },
+        SnacksDashboardDir = { fg = colors.bright_black },
+        SnacksDashboardFile = { fg = colors.fg },
+        SnacksDashboardSpecial = { fg = colors.fg },
+        SnacksDashboardFooter = { fg = colors.blue },
+
+        -- MiniStatusLine
+        MiniStatuslineModeNormal = { fg = colors.black, bg = colors.blue, bold = true },
+        MiniStatuslineModeInsert = { fg = colors.black, bg = colors.green, bold = true },
+        MiniStatuslineModeVisual = { fg = colors.black, bg = colors.bright_red, bold = true },
+        MiniStatuslineModeReplace = { fg = colors.black, bg = colors.red, bold = true },
+        MiniStatuslineModeCommand = { fg = colors.black, bg = colors.cyan, bold = true },
+        MiniStatuslineModeOthers = { fg = colors.black, bg = colors.yellow, bold = true },
+        MiniStatuslineInactive = { fg = colors.fg, bg = colors.menu, bold = true },
+        MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.black },
+        MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.black },
+        MiniStatuslineFilename = { fg = colors.white, bg = colors.bg },
     }
 end
 
@@ -72,7 +97,7 @@ return M
 --         Identifier = { fg = colors.cyan },
 --         NonText = { fg = colors.nontext },
 --         Pmenu = { fg = colors.fg, bg = colors.menu },
---
+
 --         -- Treesitter
 --         ["@function"] = { link = "Function" },
 --         ["@function.macro"] = { fg = colors.blue },
@@ -177,7 +202,7 @@ return M
 --         -- WildMenu = { fg = colors.black, bg = colors.white },
 --
 --         -- EndOfBuffer = endOfBuffer,
---
+
 --         -- -- TreeSitter
 --         -- ["@error"] = { fg = colors.bright_red },
 --         -- ["@punctuation.delimiter"] = { fg = colors.fg },
@@ -239,7 +264,7 @@ return M
 --         -- ["@tag"] = { fg = colors.cyan },
 --         -- ["@tag.attribute"] = { fg = colors.green },
 --         -- ["@tag.delimiter"] = { fg = colors.cyan },
---
+
 --         -- -- Semantic
 --         -- ["@class"] = { fg = colors.cyan },
 --         -- ["@struct"] = { fg = colors.cyan },
@@ -251,7 +276,7 @@ return M
 --         -- ["@regexp"] = { fg = colors.yellow },
 --         -- ["@typeParameter"] = { fg = colors.cyan },
 --         -- ["@decorator"] = { fg = colors.cyan },
---
+
 --         -- -- LSP Semantic (0.9+)
 --         -- ["@lsp.type.class"] = { fg = colors.cyan },
 --         -- ["@lsp.type.enum"] = { fg = colors.cyan },
@@ -267,7 +292,7 @@ return M
 --         -- ["@lsp.type.struct"] = { fg = colors.cyan },
 --         -- ["@lsp.type.type"] = { fg = colors.bright_cyan },
 --         -- ["@lsp.type.variable"] = { fg = colors.fg },
---
+
 --         -- -- HTML
 --         -- htmlArg = { fg = colors.green },
 --         -- htmlBold = { fg = colors.yellow, bold = true },
@@ -286,7 +311,7 @@ return M
 --         -- htmlTagN = { fg = colors.cyan },
 --         -- htmlTagName = { fg = colors.cyan },
 --         -- htmlTitle = { fg = colors.white },
---
+
 --         -- -- Markdown
 --         -- markdownBlockquote = { fg = colors.yellow, italic = true },
 --         -- markdownBold = { fg = colors.orange, bold = true },
@@ -316,7 +341,7 @@ return M
 --         -- ["@markup.heading.4.markdown"] = { link = "rainbowcol4" },
 --         -- ["@markup.heading.5.markdown"] = { link = "rainbowcol5" },
 --         -- ["@markup.heading.6.markdown"] = { link = "rainbowcol6" },
---
+
 --         -- --  Diff
 --         -- diffAdded = { fg = colors.green },
 --         -- diffRemoved = { fg = colors.red },
@@ -327,7 +352,7 @@ return M
 --
 --         -- debugPc = { bg = colors.menu },
 --         -- debugBreakpoint = { fg = colors.red, reverse = true },
---
+
 --         -- -- Git Signs
 --         -- GitSignsAdd = { fg = colors.bright_green },
 --         -- GitSignsChange = { fg = colors.cyan },
@@ -336,7 +361,7 @@ return M
 --         -- GitSignsChangeLn = { fg = colors.black, bg = colors.cyan },
 --         -- GitSignsDeleteLn = { fg = colors.black, bg = colors.bright_red },
 --         -- GitSignsCurrentLineBlame = { fg = colors.white },
---
+
 --         -- -- Telescope
 --         -- TelescopePromptBorder = { fg = colors.comment },
 --         -- TelescopeResultsBorder = { fg = colors.comment },
@@ -349,10 +374,10 @@ return M
 --         -- TelescopeResultsDiffDelete = { fg = colors.red },
 --         -- TelescopeResultsDiffChange = { fg = colors.cyan },
 --         -- TelescopeResultsDiffAdd = { fg = colors.green },
---
+
 --         -- -- Flash
 --         -- FlashLabel = { bg = colors.red, fg = colors.bright_white },
---
+
 --         -- -- NvimTree
 --         -- NvimTreeNormal = { fg = colors.fg, bg = colors.menu },
 --         -- NvimTreeVertSplit = { fg = colors.bg, bg = colors.bg },
@@ -370,7 +395,7 @@ return M
 --         -- NvimTreeIn = { bg = colors.selection },
 --
 --         -- NvimTreeEndOfBuffer = endOfBuffer,
---
+
 --         -- -- NeoTree
 --         -- NeoTreeNormal = { fg = colors.fg, bg = colors.menu },
 --         -- NeoTreeNormalNC = { fg = colors.fg, bg = colors.menu },
@@ -381,13 +406,13 @@ return M
 --         -- NeoTreeDirectoryIcon = { fg = colors.blue },
 --         -- NeoTreeIndentMarker = { fg = colors.nontext },
 --         -- NeoTreeDotfile = { fg = colors.comment },
---
+
 --         -- -- Bufferline
 --         -- BufferLineIndicatorSelected = { fg = colors.blue },
 --         -- BufferLineFill = { bg = colors.black },
 --         -- BufferLineBufferSelected = { bg = colors.bg },
 --         -- BufferLineSeparator = { fg = colors.black },
---
+
 --         -- -- LSP
 --         -- DiagnosticError = { fg = colors.red },
 --         -- DiagnosticWarn = { fg = colors.yellow },
@@ -423,7 +448,7 @@ return M
 --         -- LspReferenceWrite = { fg = colors.orange },
 --         -- LspCodeLens = { fg = colors.cyan },
 --         -- LspInlayHint = { fg = "#969696", bg = "#2f3146" },
---
+
 --         -- --LSP Saga
 --         -- LspFloatWinNormal = { fg = colors.fg },
 --         -- LspFloatWinBorder = { fg = colors.comment },
@@ -440,14 +465,14 @@ return M
 --         -- LspSagaDocTruncateLine = { fg = colors.comment },
 --         -- LspSagaLspFinderBorder = { fg = colors.comment },
 --         -- CodeActionNumber = { bg = "NONE", fg = colors.cyan },
---
+
 --         -- -- IndentBlankLine
 --         -- IndentBlanklineContextChar = { fg = colors.bright_red, nocombine = true },
---
+
 --         -- -- Nvim compe
 --         -- CmpItemAbbrDeprecated = { fg = colors.white, bg = colors.bg },
 --         -- CmpItemAbbrMatch = { fg = colors.cyan, bg = colors.bg },
---
+
 --         -- -- barbar
 --         -- BufferVisibleTarget = { fg = colors.red },
 --         -- BufferTabpages = { fg = colors.nontext, bg = colors.black, bold = true },
@@ -459,11 +484,11 @@ return M
 --         -- BufferInactiveMod = { fg = colors.yellow, bg = colors.black, italic = true },
 --         -- BufferInactiveSign = { fg = colors.nontext, bg = colors.black, italic = true },
 --         -- BufferInactiveTarget = { fg = colors.red, bg = colors.black, bold = true },
---
+
 --         -- -- Compe
 --         -- CompeDocumentation = { link = "Pmenu" },
 --         -- CompeDocumentationBorder = { link = "Pmenu" },
---
+
 --         -- -- Cmp
 --         -- CmpItemAbbr = { fg = colors.white, bg = colors.bg },
 --         -- CmpItemKind = { fg = colors.white, bg = colors.bg },
@@ -492,7 +517,7 @@ return M
 --         -- CmpItemKindConstant = { link = "@constant" },
 --         -- CmpItemKindStruct = { link = "@structure" },
 --         -- CmpItemKindTypeParameter = { link = "@variable.parameter" },
---
+
 --         -- -- Blink
 --         -- BlinkCmpLabel = { fg = colors.white, bg = colors.menu },
 --         -- BlinkCmpLabelDeprecated = { fg = colors.white, bg = colors.menu },
@@ -523,7 +548,7 @@ return M
 --         -- BlinkCmpKindConstant = { link = "@constant" },
 --         -- BlinkCmpKindStruct = { link = "@structure" },
 --         -- BlinkCmpKindTypeParameter = { link = "@variable.parameter" },
---
+
 --         -- -- navic
 --         -- NavicIconsFile = { link = "CmpItemKindFile" },
 --         -- NavicIconsModule = { link = "CmpItemKindModule" },
@@ -554,7 +579,7 @@ return M
 --         -- NavicIconsTypeParameter = { link = "CmpItemKindTypeParameter" },
 --         -- NavicText = { fg = "gray" },
 --         -- NavicSeparator = { fg = "gray" },
---
+
 --         -- -- TS rainbow colors
 --         -- rainbowcol1 = { fg = colors.fg },
 --         -- rainbowcol2 = { fg = colors.magenta },
@@ -563,7 +588,7 @@ return M
 --         -- rainbowcol5 = { fg = colors.blue },
 --         -- rainbowcol6 = { fg = colors.orange },
 --         -- rainbowcol7 = { fg = colors.fg },
---
+
 --         -- -- Rainbow delimiter
 --         -- RainbowDelimiterRed = { fg = colors.fg },
 --         -- RainbowDelimiterYellow = { fg = colors.magenta },
@@ -572,11 +597,11 @@ return M
 --         -- RainbowDelimiterGreen = { fg = colors.blue },
 --         -- RainbowDelimiterViolet = { fg = colors.orange },
 --         -- RainbowDelimiterCyan = { fg = colors.fg },
---
+
 --         -- -- mini.indentscope
 --         -- MiniIndentscopeSymbol = { fg = "#B5629B" },
 --         -- MiniIndentscopeSymbolOff = { fg = "#B5629B" },
---
+
 --         -- -- mini.icons
 --         -- MiniIconsAzure = { fg = colors.bright_cyan },
 --         -- MiniIconsBlue = { fg = colors.bright_blue },
@@ -586,18 +611,7 @@ return M
 --         -- MiniIconsblue = { fg = colors.blue },
 --         -- MiniIconsRed = { fg = colors.red },
 --         -- MiniIconsYellow = { fg = colors.yellow },
---
---         -- mini.statusline
---         MiniStatuslineModeNormal = { fg = colors.black, bg = colors.blue, bold = true },
---         MiniStatuslineModeInsert = { fg = colors.black, bg = colors.green, bold = true },
---         MiniStatuslineModeVisual = { fg = colors.black, bg = colors.magenta, bold = true },
---         MiniStatuslineModeReplace = { fg = colors.black, bg = colors.yellow, bold = true },
---         MiniStatuslineModeCommand = { fg = colors.black, bg = colors.cyan, bold = true },
---         MiniStatuslineInactive = { fg = colors.fg, bg = colors.visual, bold = true },
---         MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.black },
---         MiniStatuslineFilename = { fg = colors.white, bg = colors.black },
---         MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.black },
---
+
 --         -- -- mini.files
 --         -- MiniFilesNormal = { fg = colors.fg, bg = colors.menu },
 --         -- MiniFilesBorder = { fg = colors.blue, bg = colors.menu },
@@ -607,13 +621,13 @@ return M
 --         -- MiniFilesFile = { fg = colors.fg },
 --         -- MiniFilesTitle = { fg = colors.fg },
 --         -- MiniFilesTitleFocused = { fg = colors.yellow },
---
+
 --         -- -- goolord/alpha-nvim
 --         -- AlphaHeader = { fg = colors.blue },
 --         -- AlphaButtons = { fg = colors.cyan },
 --         -- AlphaShortcut = { fg = colors.orange },
 --         -- AlphaFooter = { fg = colors.blue, italic = true },
---
+
 --         -- -- nvimdev/dashboard-nvim
 --         -- DashboardShortCut = { fg = colors.cyan },
 --         -- DashboardHeader = { fg = colors.blue },
@@ -622,7 +636,7 @@ return M
 --         -- DashboardKey = { fg = colors.orange },
 --         -- DashboardDesc = { fg = colors.cyan },
 --         -- DashboardIcon = { fg = colors.cyan, bold = true },
---
+
 --         -- -- dap UI
 --         -- DapUIPlayPause = { fg = colors.bright_green },
 --         -- DapUIRestart = { fg = colors.green },
@@ -648,7 +662,7 @@ return M
 --         -- DapUIBreakpointsCurrentLine = { fg = colors.bright_green, bold = true },
 --         -- DapStoppedLine = { default = true, link = "Visual" },
 --         -- DapUIWinSelect = { fg = colors.bright_cyan, bold = true },
---
+
 --         -- -- Notify
 --         -- NotifyInfoIcon = { fg = colors.green },
 --         -- NotifyInfoTitle = { fg = colors.green },
@@ -659,14 +673,7 @@ return M
 --         -- NotifyWarnIcon = { fg = colors.orange },
 --         -- NotifyWarnTitle = { fg = colors.orange },
 --         -- NotifyWarnBorder = { fg = "#785637" },
---
---         -- -- SnacksDashboard
---         -- SnacksDashboardHeader = { fg = colors.blue },
---         -- SnacksDashboardKey = { fg = colors.orange },
---         -- SnacksDashboardDesc = { fg = colors.cyan },
---         -- SnacksDashboardIcon = { fg = colors.cyan },
---         -- SnacksDashboardFooter = { fg = colors.blue, italic = true },
---
+
 --         -- -- SnacksPicker
 --         -- SnacksBackdrop = { link = "FloatShadow" },
 --         -- SnacksPickerBorder = { fg = colors.comment },

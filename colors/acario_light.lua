@@ -1,1 +1,1 @@
-require("acario").load("acario_light")
+require("acario").load("light")

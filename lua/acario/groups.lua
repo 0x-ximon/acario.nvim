@@ -21,6 +21,7 @@ function M.load(colors)
         Cursor = { fg = colors.bg, bg = colors.cursor },
         TermCursor = { fg = colors.bg, bg = colors.cursor },
 
+        -- Treesitter
         ["@type"] = { fg = colors.blue },
         ["@type.builtin"] = { fg = colors.blue },
         ["@keyword"] = { link = "Keyword" },
@@ -38,7 +39,7 @@ function M.load(colors)
         ["@variable.builtin"] = { fg = colors.cyan },
         ["@variable.parameter"] = { fg = colors.cyan },
 
-        ["@string.escape"] = { link = "String" },
+        ["@string.escape"] = { fg = colors.green, bold = true },
 
         ["@punctuation.delimiter"] = { fg = colors.fg },
         ["@punctuation.bracket"] = { fg = colors.fg },
@@ -47,9 +48,6 @@ end
 
 return M
 
--- ---@param configs AcarioConfig
--- ---@return HighlightGroups
--- ---@nodiscard
 -- local function setup(configs)
 --     local colors = configs.colors
 --     assert(colors ~= nil, "Must pass colors")

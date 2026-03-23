@@ -1,22 +1,30 @@
+---@alias Color string
+---@alias Theme
+---| "dark"
+---| "light"
+
 ---@class Palette
----@field bg string
----@field fg string
----@field cursor string
----@field comment string
+---@field name string
+---@field theme Theme
 ---
----@field black string
----@field red string
----@field green string
----@field yellow string
----@field blue string
----@field magenta string
----@field cyan string
----@field white string
----@field bright_black string
----@field bright_red string
----@field bright_green string
----@field bright_yellow string
----@field bright_blue string
----@field bright_magenta string
----@field bright_cyan string
----@field bright_white string
+---@field bg Color
+---@field fg Color
+---@field cursor Color
+---@field comment Color
+---
+---@field black Color
+---@field red Color
+---@field green Color
+---@field yellow Color
+---@field blue Color
+---@field magenta Color
+---@field cyan Color
+---@field white Color
+---@field bright_black Color
+---@field bright_red Color
+---@field bright_green Color
+---@field bright_yellow Color
+---@field bright_blue Color
+---@field bright_magenta Color
+---@field bright_cyan Color
+---@field bright_white Color

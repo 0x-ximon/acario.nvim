@@ -1,5 +1,8 @@
 ---@type Palette
 local P = {
+    name = "acario_dark",
+    theme = "dark",
+
     bg = "#0D0E16",
     fg = "#CEDBE5",
     cursor = "#D85F00",

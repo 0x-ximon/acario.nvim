@@ -58,15 +58,15 @@ function M.load(colors)
         SnacksDashboardFooter = { fg = colors.blue },
 
         -- MiniStatusLine
-        MiniStatuslineModeNormal = { fg = colors.black, bg = colors.blue, bold = true },
-        MiniStatuslineModeInsert = { fg = colors.black, bg = colors.green, bold = true },
-        MiniStatuslineModeVisual = { fg = colors.black, bg = colors.bright_red, bold = true },
-        MiniStatuslineModeReplace = { fg = colors.black, bg = colors.red, bold = true },
-        MiniStatuslineModeCommand = { fg = colors.black, bg = colors.cyan, bold = true },
-        MiniStatuslineModeOthers = { fg = colors.black, bg = colors.yellow, bold = true },
+        MiniStatuslineModeNormal = { fg = colors.bg, bg = colors.blue, bold = true },
+        MiniStatuslineModeInsert = { fg = colors.bg, bg = colors.green, bold = true },
+        MiniStatuslineModeVisual = { fg = colors.bg, bg = colors.bright_red, bold = true },
+        MiniStatuslineModeReplace = { fg = colors.bg, bg = colors.red, bold = true },
+        MiniStatuslineModeCommand = { fg = colors.bg, bg = colors.cyan, bold = true },
+        MiniStatuslineModeOthers = { fg = colors.bg, bg = colors.yellow, bold = true },
         MiniStatuslineInactive = { fg = colors.fg, bg = colors.menu, bold = true },
-        MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.black },
-        MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.black },
+        MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.visual },
+        MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.visual },
         MiniStatuslineFilename = { fg = colors.white, bg = colors.bg },
     }
 end

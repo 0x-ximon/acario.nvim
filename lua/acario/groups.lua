@@ -34,10 +34,10 @@ function M.load(colors)
         ["@method"] = { link = "Function" },
         ["@method.call"] = { fg = colors.fg },
 
-        ["@variable"] = { fg = colors.cyan },
-        ["@variable.member"] = { fg = colors.fg },
+        ["@variable"] = { fg = colors.fg },
+        ["@variable.member"] = { fg = colors.cyan },
         ["@variable.builtin"] = { fg = colors.cyan },
-        ["@variable.parameter"] = { fg = colors.cyan },
+        ["@variable.parameter"] = { fg = colors.fg },
 
         ["@string.escape"] = { fg = colors.green, bold = true },
 

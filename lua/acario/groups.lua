@@ -45,28 +45,38 @@ function M.load(colors)
         Comment = { fg = colors.comment, italic = true },
 
         -- Treesitter
-        ["@type"] = { link = "Type" },
-        ["@type.builtin"] = { link = "Type" },
         ["@keyword"] = { link = "Keyword" },
         ["@namespace"] = { fg = colors.magenta },
         ["@module"] = { fg = colors.magenta },
         ["@property"] = { fg = colors.fg },
+        ["@error"] = { fg = colors.bright_red },
+
+        ["@type"] = { link = "Type" },
+        ["@type.builtin"] = { fg = colors.blue },
 
         ["@function"] = { link = "Function" },
         ["@function.call"] = { fg = colors.fg },
+        ["@function.macro"] = { fg = colors.blue },
 
         ["@method"] = { link = "Function" },
         ["@method.call"] = { fg = colors.fg },
 
-        ["@variable"] = { fg = colors.fg },
+        ["@constant"] = { link = "Constant" },
+        ["@variable"] = { link = "Variable" },
         ["@variable.member"] = { fg = colors.cyan },
         ["@variable.builtin"] = { fg = colors.cyan },
         ["@variable.parameter"] = { fg = colors.fg },
 
+        ["@string"] = { link = "String" },
         ["@string.escape"] = { fg = colors.green, bold = true },
 
         ["@punctuation.delimiter"] = { fg = colors.fg },
         ["@punctuation.bracket"] = { fg = colors.fg },
+
+        -- LSP
+        LspReferenceText = { bold = true },
+        LspReferenceRead = { bold = true },
+        LspReferenceWrite = { bold = true },
 
         -- ---------------------------------------------------------------
         --                             MODULES
@@ -96,46 +106,13 @@ function M.load(colors)
         -- ---------------------------------------------------------------
         --                             TESTING
         -- ---------------------------------------------------------------
-        --
     }
 end
 
 return M
 
 -- local function setup(configs)
---     local colors = configs.colors
---     assert(colors ~= nil, "Must pass colors")
---
---     local endOfBuffer = {
---         fg = configs.show_end_of_buffer and colors.visual or colors.bg,
---     }
---
 --     return {
---         LineNr = { fg = colors.gutter_fg },
---         Cursor = { fg = colors.orange, bold = true },
---         CursorLineNr = { fg = colors.orange, bold = true },
---         Constant = { fg = colors.magenta },
---         String = { fg = colors.green },
---         Statement = { fg = colors.red },
---         Type = { fg = colors.blue },
---         Identifier = { fg = colors.cyan },
---         NonText = { fg = colors.nontext },
---         Pmenu = { fg = colors.fg, bg = colors.menu },
-
---         -- Treesitter
---         ["@function"] = { link = "Function" },
---         ["@function.macro"] = { fg = colors.blue },
---         ["@function.builtin"] = { fg = colors.blue },
---
---         -- ["@keyword"] = { link = "Statement" },
---         --
---         -- ["@string"] = { link = "String" },
---         -- ["@type"] = { link = "Type" },
---         -- ["@constant"] = { link = "Constant" },
---         -- ["@parameter"] = { fg = colors.fg },
---         -- ["@property"] = { fg = colors.magenta },
---         -- ["@error"] = { fg = colors.bright_red },
---
 --         -- Normal = { fg = colors.fg, bg = colors.bg },
 --         -- NormalFloat = { fg = colors.fg, bg = colors.bg },
 --         -- Comment = { fg = colors.comment, italic = configs.italic_comment },

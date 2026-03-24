@@ -7,26 +7,50 @@ local M = {}
 ---@return HighlightGroups
 function M.load(colors)
     return {
-        Normal = { fg = colors.fg, bg = colors.bg },
-        Comment = { fg = colors.comment, italic = true },
-        String = { fg = colors.green },
-        Keyword = { fg = colors.red },
-        Function = { fg = colors.yellow },
-        Variable = { fg = colors.cyan },
-        Identifier = { fg = colors.cyan },
-        Constant = { fg = colors.blue },
-        Include = { fg = colors.magenta },
-        Number = { fg = colors.fg },
+        -- ---------------------------------------------------------------
+        --                             EDITOR
+        -- ---------------------------------------------------------------
 
+        Normal = { fg = colors.fg, bg = colors.bg },
+        Visual = { bg = colors.visual },
+        NormalNC = { fg = colors.fg, bg = colors.bg },
+        VertSplit = { fg = colors.menu, bg = colors.bg },
+        WinSeparator = { fg = colors.menu, bg = colors.bg },
+        MsgArea = { fg = colors.fg, bg = colors.bg },
         Cursor = { fg = colors.bg, bg = colors.cursor },
         TermCursor = { fg = colors.bg, bg = colors.cursor },
+        LineNr = { fg = colors.bright_black },
+        EndOfBuffer = { fg = colors.bg },
+
+        Pmenu = { fg = colors.fg, bg = colors.menu },
+        PmenuSel = { fg = colors.bg, bg = colors.blue },
+        PmenuSbar = { bg = colors.menu },
+        PmenuThumb = { bg = colors.gutter_fg },
+
+        -- ---------------------------------------------------------------
+        --                             SYNTAX
+        -- ---------------------------------------------------------------
+
+        Statement = { fg = colors.red },
+        Keyword = { fg = colors.red },
+        Identifier = { fg = colors.fg },
+        Include = { fg = colors.magenta },
+        Function = { fg = colors.yellow },
+        Variable = { fg = colors.fg },
+        Constant = { fg = colors.blue },
+        Type = { fg = colors.blue },
+        String = { fg = colors.green },
+        Number = { fg = colors.fg },
+        NonText = { fg = colors.bg },
+        Comment = { fg = colors.comment, italic = true },
 
         -- Treesitter
-        ["@type"] = { fg = colors.blue },
-        ["@type.builtin"] = { fg = colors.blue },
+        ["@type"] = { link = "Type" },
+        ["@type.builtin"] = { link = "Type" },
         ["@keyword"] = { link = "Keyword" },
         ["@namespace"] = { fg = colors.magenta },
         ["@module"] = { fg = colors.magenta },
+        ["@property"] = { fg = colors.fg },
 
         ["@function"] = { link = "Function" },
         ["@function.call"] = { fg = colors.fg },
@@ -64,10 +88,15 @@ function M.load(colors)
         MiniStatuslineModeReplace = { fg = colors.bg, bg = colors.red, bold = true },
         MiniStatuslineModeCommand = { fg = colors.bg, bg = colors.cyan, bold = true },
         MiniStatuslineModeOthers = { fg = colors.bg, bg = colors.yellow, bold = true },
-        MiniStatuslineInactive = { fg = colors.fg, bg = colors.menu, bold = true },
+        MiniStatuslineInactive = { fg = colors.fg, bg = colors.menu },
         MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.visual },
         MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.visual },
         MiniStatuslineFilename = { fg = colors.white, bg = colors.bg },
+
+        -- ---------------------------------------------------------------
+        --                             TESTING
+        -- ---------------------------------------------------------------
+        --
     }
 end
 
@@ -82,11 +111,6 @@ return M
 --     }
 --
 --     return {
---         Normal = { fg = colors.fg, bg = colors.bg },
---         Visual = { bg = colors.visual },
---         Function = { fg = colors.yellow },
---         Comment = { fg = colors.comment, italic = true },
---
 --         LineNr = { fg = colors.gutter_fg },
 --         Cursor = { fg = colors.orange, bold = true },
 --         CursorLineNr = { fg = colors.orange, bold = true },

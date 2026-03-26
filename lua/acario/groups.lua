@@ -45,14 +45,16 @@ function M.load(colors)
         Comment = { fg = colors.comment, italic = true },
 
         -- Treesitter
-        ["@keyword"] = { link = "Keyword" },
         ["@namespace"] = { fg = colors.magenta },
-        ["@module"] = { fg = colors.magenta },
         ["@property"] = { fg = colors.cyan },
+        ["@module"] = { fg = colors.magenta },
         ["@error"] = { fg = colors.bright_red },
 
+        ["@keyword"] = { link = "Keyword" },
+        ["@constant"] = { link = "Constant" },
+
         ["@type"] = { link = "Type" },
-        ["@type.builtin"] = { fg = colors.blue },
+        ["@type.builtin"] = { link = "Type" },
 
         ["@function"] = { link = "Function" },
         ["@function.call"] = { fg = colors.fg },
@@ -61,7 +63,6 @@ function M.load(colors)
         ["@method"] = { link = "Function" },
         ["@method.call"] = { fg = colors.fg },
 
-        ["@constant"] = { link = "Constant" },
         ["@variable"] = { link = "Variable" },
         ["@variable.member"] = { fg = colors.cyan },
         ["@variable.builtin"] = { fg = colors.cyan },
@@ -69,9 +70,10 @@ function M.load(colors)
 
         ["@string"] = { link = "String" },
         ["@string.escape"] = { fg = colors.green, bold = true },
+        ["@string.special"] = { fg = colors.green, italic = true },
 
-        ["@punctuation.delimiter"] = { fg = colors.fg },
         ["@punctuation.bracket"] = { fg = colors.fg },
+        ["@punctuation.delimiter"] = { fg = colors.fg },
 
         -- LSP
         LspReferenceText = { bold = true },
@@ -79,17 +81,23 @@ function M.load(colors)
         LspReferenceWrite = { bold = true },
 
         ["@lsp.type.type"] = { link = "@type" },
-        ["@lsp.type.method"] = { link = "@method" },
+        ["@lsp.type.class"] = { link = "@type" },
+        ["@lsp.type.struct"] = { link = "@type" },
+        ["@lsp.type.interface"] = { link = "@type" },
+        ["@lsp.type.decorator"] = { link = "@type" },
+
         ["@lsp.type.property"] = { link = "@property" },
         ["@lsp.type.namespace"] = { link = "@namespace" },
 
-        ["@lsp.type.variable"] = { link = "@variable" },
-        ["@lsp.type.parameter"] = { link = "@variable.parameter" },
-
+        ["@lsp.type.method"] = { link = "@method" },
         ["@lsp.type.function"] = { link = "@function" },
         ["@lsp.type.macro"] = { link = "@function.macro" },
 
+        ["@lsp.type.enum"] = { link = "@type" },
         ["@lsp.type.enumMember"] = { link = "@constant" },
+
+        ["@lsp.type.variable"] = { link = "@variable" },
+        ["@lsp.type.parameter"] = { link = "@variable.parameter" },
 
         -- ---------------------------------------------------------------
         --                            LANGUAGES
@@ -113,6 +121,25 @@ function M.load(colors)
         SnacksDashboardFile = { fg = colors.fg },
         SnacksDashboardSpecial = { fg = colors.fg },
         SnacksDashboardFooter = { fg = colors.blue },
+
+        -- SnacksPicker
+        SnacksBackdrop = { link = "FloatShadow" },
+        SnacksPickerBorder = { fg = colors.menu },
+        SnacksPickerDir = { fg = colors.fg },
+        SnacksPickerDirectory = { fg = colors.fg },
+        SnacksPickerFile = { fg = colors.fg },
+        SnacksPickerGitStatusIgnored = { fg = colors.menu },
+        SnacksPickerGitStatusModified = { fg = colors.yellow },
+        SnacksPickerGitStatusRenamed = { fg = colors.yellow },
+        SnacksPickerGitStatusStaged = { fg = colors.bright_green },
+        SnacksPickerGitStatusUnmerged = { fg = colors.bright_red },
+        SnacksPickerGitStatusUntracked = { fg = colors.green },
+        SnacksPickerInput = { link = "NormalFloat" },
+        SnacksPickerInputBorder = { link = "SnacksPickerBorder" },
+        SnacksPickerMatch = { fg = colors.green, italic = true },
+        SnacksPickerPathHidden = { fg = colors.menu },
+        SnacksPickerPrompt = { fg = colors.blue },
+        SnacksPickerTitle = { fg = colors.cyan, bold = true },
 
         -- MiniStatusLine
         MiniStatuslineModeNormal = { fg = colors.bg, bg = colors.blue, bold = true },
@@ -698,24 +725,6 @@ return M
 --         -- NotifyWarnTitle = { fg = colors.orange },
 --         -- NotifyWarnBorder = { fg = "#785637" },
 
---         -- -- SnacksPicker
---         -- SnacksBackdrop = { link = "FloatShadow" },
---         -- SnacksPickerBorder = { fg = colors.comment },
---         -- SnacksPickerDir = { fg = colors.fg },
---         -- SnacksPickerDirectory = { fg = colors.fg },
---         -- SnacksPickerFile = { fg = colors.fg },
---         -- SnacksPickerGitStatusIgnored = { fg = colors.comment },
---         -- SnacksPickerGitStatusModified = { fg = colors.yellow },
---         -- SnacksPickerGitStatusRenamed = { fg = colors.yellow },
---         -- SnacksPickerGitStatusStaged = { fg = colors.bright_green },
---         -- SnacksPickerGitStatusUnmerged = { fg = colors.orange },
---         -- SnacksPickerGitStatusUntracked = { fg = colors.green },
---         -- SnacksPickerInput = { link = "NormalFloat" },
---         -- SnacksPickerInputBorder = { link = "SnacksPickerBorder" },
---         -- SnacksPickerMatch = { fg = colors.green, italic = true },
---         -- SnacksPickerPathHidden = { fg = colors.comment },
---         -- SnacksPickerPrompt = { fg = colors.blue },
---         -- SnacksPickerTitle = { fg = colors.cyan, bold = true },
 --
 --         -- -- Neogit
 --         -- NeogitDiffAdd = { fg = colors.bright_green, bg = colors.menu },

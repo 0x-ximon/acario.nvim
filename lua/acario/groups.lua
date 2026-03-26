@@ -48,7 +48,7 @@ function M.load(colors)
         ["@keyword"] = { link = "Keyword" },
         ["@namespace"] = { fg = colors.magenta },
         ["@module"] = { fg = colors.magenta },
-        ["@property"] = { fg = colors.fg },
+        ["@property"] = { fg = colors.cyan },
         ["@error"] = { fg = colors.bright_red },
 
         ["@type"] = { link = "Type" },
@@ -77,6 +77,29 @@ function M.load(colors)
         LspReferenceText = { bold = true },
         LspReferenceRead = { bold = true },
         LspReferenceWrite = { bold = true },
+
+        ["@lsp.type.type"] = { link = "@type" },
+        ["@lsp.type.method"] = { link = "@method" },
+        ["@lsp.type.property"] = { link = "@property" },
+        ["@lsp.type.namespace"] = { link = "@namespace" },
+
+        ["@lsp.type.variable"] = { link = "@variable" },
+        ["@lsp.type.parameter"] = { link = "@variable.parameter" },
+
+        ["@lsp.type.function"] = { link = "@function" },
+        ["@lsp.type.macro"] = { link = "@function.macro" },
+
+        ["@lsp.type.enumMember"] = { link = "@constant" },
+
+        -- ---------------------------------------------------------------
+        --                            LANGUAGES
+        -- ---------------------------------------------------------------
+
+        -- Lua
+        ["@property.lua"] = { fg = colors.fg },
+        ["@constructor.lua"] = { fg = colors.fg },
+        ["@lsp.type.property.lua"] = { link = "@property" },
+        ["@lsp.type.parameter.lua"] = { link = "@variable.parameter" },
 
         -- ---------------------------------------------------------------
         --                             MODULES

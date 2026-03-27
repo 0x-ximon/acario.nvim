@@ -12,6 +12,7 @@ function M.load(colors)
         -- ---------------------------------------------------------------
 
         Normal = { fg = colors.foreground, bg = colors.background },
+        NormalFloat = { fg = colors.foreground, bg = colors.background },
         Visual = { bg = colors.secondary },
         NormalNC = { fg = colors.foreground, bg = colors.background },
         VertSplit = { fg = colors.neutral, bg = colors.background },
@@ -113,6 +114,10 @@ function M.load(colors)
         --                             MODULES
         -- ---------------------------------------------------------------
 
+        -- Oil
+        OilDir = { fg = colors.blue },
+        OilFile = { fg = colors.foreground },
+
         -- SnacksDashboard
         SnacksDashboardHeader = { fg = colors.blue },
         SnacksDashboardIcon = { fg = colors.blue },
@@ -125,15 +130,14 @@ function M.load(colors)
         -- SnacksPicker
         SnacksBackdrop = { link = "FloatShadow" },
         SnacksPickerBorder = { fg = colors.neutral },
-        SnacksPickerDir = { fg = colors.foreground },
-        SnacksPickerDirectory = { fg = colors.foreground },
         SnacksPickerFile = { fg = colors.foreground },
+        SnacksPickerDir = { fg = colors.bright_black },
         SnacksPickerGitStatusIgnored = { fg = colors.neutral },
-        SnacksPickerGitStatusModified = { fg = colors.yellow },
-        SnacksPickerGitStatusRenamed = { fg = colors.yellow },
+        SnacksPickerGitStatusModified = { fg = colors.bright_yellow },
+        SnacksPickerGitStatusRenamed = { fg = colors.bright_yellow },
         SnacksPickerGitStatusStaged = { fg = colors.bright_green },
         SnacksPickerGitStatusUnmerged = { fg = colors.bright_red },
-        SnacksPickerGitStatusUntracked = { fg = colors.green },
+        SnacksPickerGitStatusUntracked = { fg = colors.bright_black },
         SnacksPickerInput = { link = "NormalFloat" },
         SnacksPickerInputBorder = { link = "SnacksPickerBorder" },
         SnacksPickerMatch = { fg = colors.green, italic = true },
@@ -160,7 +164,6 @@ return M
 -- local function setup(configs)
 --     return {
 --         -- Normal = { fg = colors.fg, bg = colors.bg },
---         -- NormalFloat = { fg = colors.fg, bg = colors.bg },
 --         -- Comment = { fg = colors.comment, italic = configs.italic_comment },
 --         -- Constant = { fg = colors.magenta },
 --         -- String = { fg = colors.green },

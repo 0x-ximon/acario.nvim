@@ -142,12 +142,12 @@ function M.load(colors)
         SnacksPickerTitle = { fg = colors.cyan, bold = true },
 
         -- MiniStatusLine
-        MiniStatuslineModeNormal = { fg = colors.background, bg = colors.bright_blue, bold = true },
-        MiniStatuslineModeInsert = { fg = colors.background, bg = colors.bright_green, bold = true },
-        MiniStatuslineModeVisual = { fg = colors.background, bg = colors.bright_magenta, bold = true },
-        MiniStatuslineModeReplace = { fg = colors.background, bg = colors.bright_red, bold = true },
-        MiniStatuslineModeCommand = { fg = colors.background, bg = colors.bright_yellow, bold = true },
-        MiniStatuslineModeOthers = { fg = colors.background, bg = colors.bright_cyan, bold = true },
+        MiniStatuslineModeNormal = { fg = colors.background, bg = colors.blue, bold = true },
+        MiniStatuslineModeInsert = { fg = colors.background, bg = colors.green, bold = true },
+        MiniStatuslineModeVisual = { fg = colors.background, bg = colors.yellow, bold = true },
+        MiniStatuslineModeReplace = { fg = colors.background, bg = colors.red, bold = true },
+        MiniStatuslineModeCommand = { fg = colors.background, bg = colors.magenta, bold = true },
+        MiniStatuslineModeOthers = { fg = colors.background, bg = colors.cyan, bold = true },
         MiniStatuslineInactive = { fg = colors.foreground, bg = colors.neutral },
         MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.neutral },
         MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.neutral },

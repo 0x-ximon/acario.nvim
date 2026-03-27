@@ -7,7 +7,7 @@ local P = {
     foreground = "#CEDBE5",
 
     primary = "#D85F00",
-    secondary = "#36D8BD",
+    secondary = "#1E1E33",
 
     neutral = "#161722",
     muted = "#767676",

@@ -11,21 +11,21 @@ function M.load(colors)
         --                             EDITOR
         -- ---------------------------------------------------------------
 
-        Normal = { fg = colors.fg, bg = colors.bg },
-        Visual = { bg = colors.visual },
-        NormalNC = { fg = colors.fg, bg = colors.bg },
-        VertSplit = { fg = colors.menu, bg = colors.bg },
-        WinSeparator = { fg = colors.menu, bg = colors.bg },
-        MsgArea = { fg = colors.fg, bg = colors.bg },
-        Cursor = { fg = colors.bg, bg = colors.cursor },
-        TermCursor = { fg = colors.bg, bg = colors.cursor },
+        Normal = { fg = colors.foreground, bg = colors.background },
+        Visual = { bg = colors.secondary },
+        NormalNC = { fg = colors.foreground, bg = colors.background },
+        VertSplit = { fg = colors.neutral, bg = colors.background },
+        WinSeparator = { fg = colors.neutral, bg = colors.background },
+        MsgArea = { fg = colors.foreground, bg = colors.background },
+        Cursor = { fg = colors.background, bg = colors.primary },
+        TermCursor = { fg = colors.background, bg = colors.primary },
         LineNr = { fg = colors.bright_black },
-        EndOfBuffer = { fg = colors.bg },
+        EndOfBuffer = { fg = colors.background },
 
-        Pmenu = { fg = colors.fg, bg = colors.menu },
-        PmenuSel = { fg = colors.bg, bg = colors.blue },
-        PmenuSbar = { bg = colors.menu },
-        PmenuThumb = { bg = colors.gutter_fg },
+        Pmenu = { fg = colors.foreground, bg = colors.neutral },
+        PmenuSel = { fg = colors.background, bg = colors.blue },
+        PmenuSbar = { bg = colors.neutral },
+        PmenuThumb = { bg = colors.grey },
 
         -- ---------------------------------------------------------------
         --                             SYNTAX
@@ -33,16 +33,16 @@ function M.load(colors)
 
         Statement = { fg = colors.red },
         Keyword = { fg = colors.red },
-        Identifier = { fg = colors.fg },
+        Identifier = { fg = colors.foreground },
         Include = { fg = colors.magenta },
         Function = { fg = colors.yellow },
-        Variable = { fg = colors.fg },
+        Variable = { fg = colors.foreground },
         Constant = { fg = colors.blue },
         Type = { fg = colors.blue },
         String = { fg = colors.green },
-        Number = { fg = colors.fg },
-        NonText = { fg = colors.bg },
-        Comment = { fg = colors.comment, italic = true },
+        Number = { fg = colors.foreground },
+        NonText = { fg = colors.background },
+        Comment = { fg = colors.muted, italic = true },
 
         -- Treesitter
         ["@namespace"] = { fg = colors.magenta },
@@ -57,23 +57,23 @@ function M.load(colors)
         ["@type.builtin"] = { link = "Type" },
 
         ["@function"] = { link = "Function" },
-        ["@function.call"] = { fg = colors.fg },
+        ["@function.call"] = { fg = colors.foreground },
         ["@function.macro"] = { fg = colors.blue },
 
         ["@method"] = { link = "Function" },
-        ["@method.call"] = { fg = colors.fg },
+        ["@method.call"] = { fg = colors.foreground },
 
         ["@variable"] = { link = "Variable" },
         ["@variable.member"] = { fg = colors.cyan },
         ["@variable.builtin"] = { fg = colors.cyan },
-        ["@variable.parameter"] = { fg = colors.fg },
+        ["@variable.parameter"] = { fg = colors.foreground },
 
         ["@string"] = { link = "String" },
         ["@string.escape"] = { fg = colors.green, bold = true },
         ["@string.special"] = { fg = colors.green, italic = true },
 
-        ["@punctuation.bracket"] = { fg = colors.fg },
-        ["@punctuation.delimiter"] = { fg = colors.fg },
+        ["@punctuation.bracket"] = { fg = colors.foreground },
+        ["@punctuation.delimiter"] = { fg = colors.foreground },
 
         -- LSP
         LspReferenceText = { bold = true },
@@ -104,8 +104,8 @@ function M.load(colors)
         -- ---------------------------------------------------------------
 
         -- Lua
-        ["@property.lua"] = { fg = colors.fg },
-        ["@constructor.lua"] = { fg = colors.fg },
+        ["@property.lua"] = { fg = colors.foreground },
+        ["@constructor.lua"] = { fg = colors.foreground },
         ["@lsp.type.property.lua"] = { link = "@property" },
         ["@lsp.type.parameter.lua"] = { link = "@variable.parameter" },
 
@@ -118,17 +118,17 @@ function M.load(colors)
         SnacksDashboardIcon = { fg = colors.blue },
         SnacksDashboardKey = { fg = colors.blue },
         SnacksDashboardDir = { fg = colors.bright_black },
-        SnacksDashboardFile = { fg = colors.fg },
-        SnacksDashboardSpecial = { fg = colors.fg },
+        SnacksDashboardFile = { fg = colors.foreground },
+        SnacksDashboardSpecial = { fg = colors.foreground },
         SnacksDashboardFooter = { fg = colors.blue },
 
         -- SnacksPicker
         SnacksBackdrop = { link = "FloatShadow" },
-        SnacksPickerBorder = { fg = colors.menu },
-        SnacksPickerDir = { fg = colors.fg },
-        SnacksPickerDirectory = { fg = colors.fg },
-        SnacksPickerFile = { fg = colors.fg },
-        SnacksPickerGitStatusIgnored = { fg = colors.menu },
+        SnacksPickerBorder = { fg = colors.neutral },
+        SnacksPickerDir = { fg = colors.foreground },
+        SnacksPickerDirectory = { fg = colors.foreground },
+        SnacksPickerFile = { fg = colors.foreground },
+        SnacksPickerGitStatusIgnored = { fg = colors.neutral },
         SnacksPickerGitStatusModified = { fg = colors.yellow },
         SnacksPickerGitStatusRenamed = { fg = colors.yellow },
         SnacksPickerGitStatusStaged = { fg = colors.bright_green },
@@ -137,25 +137,21 @@ function M.load(colors)
         SnacksPickerInput = { link = "NormalFloat" },
         SnacksPickerInputBorder = { link = "SnacksPickerBorder" },
         SnacksPickerMatch = { fg = colors.green, italic = true },
-        SnacksPickerPathHidden = { fg = colors.menu },
+        SnacksPickerPathHidden = { fg = colors.neutral },
         SnacksPickerPrompt = { fg = colors.blue },
         SnacksPickerTitle = { fg = colors.cyan, bold = true },
 
         -- MiniStatusLine
-        MiniStatuslineModeNormal = { fg = colors.bg, bg = colors.blue, bold = true },
-        MiniStatuslineModeInsert = { fg = colors.bg, bg = colors.green, bold = true },
-        MiniStatuslineModeVisual = { fg = colors.bg, bg = colors.bright_red, bold = true },
-        MiniStatuslineModeReplace = { fg = colors.bg, bg = colors.red, bold = true },
-        MiniStatuslineModeCommand = { fg = colors.bg, bg = colors.cyan, bold = true },
-        MiniStatuslineModeOthers = { fg = colors.bg, bg = colors.yellow, bold = true },
-        MiniStatuslineInactive = { fg = colors.fg, bg = colors.menu },
-        MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.visual },
-        MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.visual },
-        MiniStatuslineFilename = { fg = colors.white, bg = colors.bg },
-
-        -- ---------------------------------------------------------------
-        --                             TESTING
-        -- ---------------------------------------------------------------
+        MiniStatuslineModeNormal = { fg = colors.background, bg = colors.bright_blue, bold = true },
+        MiniStatuslineModeInsert = { fg = colors.background, bg = colors.bright_green, bold = true },
+        MiniStatuslineModeVisual = { fg = colors.background, bg = colors.bright_magenta, bold = true },
+        MiniStatuslineModeReplace = { fg = colors.background, bg = colors.bright_red, bold = true },
+        MiniStatuslineModeCommand = { fg = colors.background, bg = colors.bright_yellow, bold = true },
+        MiniStatuslineModeOthers = { fg = colors.background, bg = colors.bright_cyan, bold = true },
+        MiniStatuslineInactive = { fg = colors.foreground, bg = colors.neutral },
+        MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.neutral },
+        MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.neutral },
+        MiniStatuslineFilename = { fg = colors.white, bg = colors.background },
     }
 end
 

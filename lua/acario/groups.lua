@@ -14,6 +14,7 @@ function M.load(colors)
         Normal = { fg = colors.foreground, bg = colors.background },
         NormalFloat = { fg = colors.foreground, bg = colors.background },
         Visual = { bg = colors.secondary },
+        Title = { fg = colors.blue },
         NormalNC = { fg = colors.foreground, bg = colors.background },
         VertSplit = { fg = colors.neutral, bg = colors.background },
         WinSeparator = { fg = colors.neutral, bg = colors.background },
@@ -50,6 +51,7 @@ function M.load(colors)
         ["@property"] = { fg = colors.cyan },
         ["@module"] = { fg = colors.magenta },
         ["@error"] = { fg = colors.bright_red },
+        ["@tag"] = { fg = colors.green },
 
         ["@class"] = { link = "Type" },
         ["@struct"] = { link = "Type" },
@@ -117,6 +119,22 @@ function M.load(colors)
         ["@constructor.lua"] = { fg = colors.foreground },
         ["@lsp.type.property.lua"] = { link = "@property" },
         ["@lsp.type.parameter.lua"] = { link = "@variable.parameter" },
+
+        -- Markdown
+        ["@markup.heading.1.markdown"] = { link = "Title" },
+        ["@markup.heading.2.markdown"] = { link = "Title" },
+        ["@markup.heading.3.markdown"] = { link = "Title" },
+        ["@markup.heading.4.markdown"] = { link = "Title" },
+        ["@markup.heading.5.markdown"] = { link = "Title" },
+        ["@markup.heading.6.markdown"] = { link = "Title" },
+
+        ["@markup.strong"] = { fg = colors.foreground, bold = true },
+        ["@markup.italic"] = { fg = colors.foreground, italic = true },
+        ["@markup.strikethrough"] = { fg = colors.foreground, strikethrough = true },
+
+        ["@markup.raw"] = { fg = colors.foreground, italic = true },
+        ["@markup.link"] = { fg = colors.foreground, italic = true },
+        ["@markup.quote.markdown"] = { fg = colors.green },
 
         -- ---------------------------------------------------------------
         --                             MODULES
@@ -337,36 +355,6 @@ return M
 --         -- htmlTagN = { fg = colors.cyan },
 --         -- htmlTagName = { fg = colors.cyan },
 --         -- htmlTitle = { fg = colors.white },
-
---         -- -- Markdown
---         -- markdownBlockquote = { fg = colors.yellow, italic = true },
---         -- markdownBold = { fg = colors.orange, bold = true },
---         -- markdownCode = { fg = colors.green },
---         -- markdownCodeBlock = { fg = colors.orange },
---         -- markdownCodeDelimiter = { fg = colors.red },
---         -- markdownH2 = { link = "rainbow2" },
---         -- markdownH1 = { link = "rainbow1" },
---         -- markdownH3 = { link = "rainbow3" },
---         -- markdownH4 = { link = "rainbow4" },
---         -- markdownH5 = { link = "rainbow5" },
---         -- markdownH6 = { link = "rainbow6" },
---         -- markdownHeadingDelimiter = { fg = colors.red },
---         -- markdownHeadingRule = { fg = colors.comment },
---         -- markdownId = { fg = colors.blue },
---         -- markdownIdDeclaration = { fg = colors.cyan },
---         -- markdownIdDelimiter = { fg = colors.blue },
---         -- markdownItalic = { fg = colors.yellow, italic = true },
---         -- markdownLinkDelimiter = { fg = colors.blue },
---         -- markdownLinkText = { fg = colors.magenta },
---         -- markdownListMarker = { fg = colors.cyan },
---         -- markdownOrderedListMarker = { fg = colors.red },
---         -- markdownRule = { fg = colors.comment },
---         -- ["@markup.heading.1.markdown"] = { link = "rainbowcol1" },
---         -- ["@markup.heading.2.markdown"] = { link = "rainbowcol2" },
---         -- ["@markup.heading.3.markdown"] = { link = "rainbowcol3" },
---         -- ["@markup.heading.4.markdown"] = { link = "rainbowcol4" },
---         -- ["@markup.heading.5.markdown"] = { link = "rainbowcol5" },
---         -- ["@markup.heading.6.markdown"] = { link = "rainbowcol6" },
 
 --         -- --  Diff
 --         -- diffAdded = { fg = colors.green },

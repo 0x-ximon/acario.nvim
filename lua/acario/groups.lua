@@ -51,6 +51,11 @@ function M.load(colors)
         ["@module"] = { fg = colors.magenta },
         ["@error"] = { fg = colors.bright_red },
 
+        ["@class"] = { link = "Type" },
+        ["@struct"] = { link = "Type" },
+        ["@interface"] = { link = "Type" },
+        ["@decorator"] = { link = "Type" },
+
         ["@keyword"] = { link = "Keyword" },
         ["@constant"] = { link = "Constant" },
 
@@ -60,6 +65,9 @@ function M.load(colors)
         ["@function"] = { link = "Function" },
         ["@function.call"] = { fg = colors.foreground },
         ["@function.macro"] = { fg = colors.blue },
+
+        ["@enum"] = { link = "Type" },
+        ["@enumMember"] = { link = "Constant" },
 
         ["@method"] = { link = "Function" },
         ["@method.call"] = { fg = colors.foreground },
@@ -82,10 +90,10 @@ function M.load(colors)
         LspReferenceWrite = { bold = true },
 
         ["@lsp.type.type"] = { link = "@type" },
-        ["@lsp.type.class"] = { link = "@type" },
-        ["@lsp.type.struct"] = { link = "@type" },
-        ["@lsp.type.interface"] = { link = "@type" },
-        ["@lsp.type.decorator"] = { link = "@type" },
+        ["@lsp.type.class"] = { link = "@class" },
+        ["@lsp.type.struct"] = { link = "@struct" },
+        ["@lsp.type.interface"] = { link = "@interface" },
+        ["@lsp.type.decorator"] = { link = "@decorator" },
 
         ["@lsp.type.property"] = { link = "@property" },
         ["@lsp.type.namespace"] = { link = "@namespace" },
@@ -94,8 +102,8 @@ function M.load(colors)
         ["@lsp.type.function"] = { link = "@function" },
         ["@lsp.type.macro"] = { link = "@function.macro" },
 
-        ["@lsp.type.enum"] = { link = "@type" },
-        ["@lsp.type.enumMember"] = { link = "@constant" },
+        ["@lsp.type.enum"] = { link = "@enum" },
+        ["@lsp.type.enumMember"] = { link = "@enumMember" },
 
         ["@lsp.type.variable"] = { link = "@variable" },
         ["@lsp.type.parameter"] = { link = "@variable.parameter" },
@@ -310,18 +318,6 @@ return M
 --         -- ["@tag"] = { fg = colors.cyan },
 --         -- ["@tag.attribute"] = { fg = colors.green },
 --         -- ["@tag.delimiter"] = { fg = colors.cyan },
-
---         -- -- Semantic
---         -- ["@class"] = { fg = colors.cyan },
---         -- ["@struct"] = { fg = colors.cyan },
---         -- ["@enum"] = { fg = colors.cyan },
---         -- ["@enumMember"] = { fg = colors.blue },
---         -- ["@event"] = { fg = colors.cyan },
---         -- ["@interface"] = { fg = colors.cyan },
---         -- ["@modifier"] = { fg = colors.cyan },
---         -- ["@regexp"] = { fg = colors.yellow },
---         -- ["@typeParameter"] = { fg = colors.cyan },
---         -- ["@decorator"] = { fg = colors.cyan },
 
 --         -- -- HTML
 --         -- htmlArg = { fg = colors.green },

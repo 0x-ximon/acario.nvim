@@ -7,10 +7,15 @@
 ---@field name string
 ---@field theme Theme
 ---
----@field bg Color
----@field fg Color
----@field cursor Color
----@field comment Color
+---@field background Color
+---@field foreground Color
+---
+---@field primary Color
+---@field secondary Color
+---
+---@field neutral Color
+---@field muted Color
+---@field grey Color
 ---
 ---@field black Color
 ---@field red Color

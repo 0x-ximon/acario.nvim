@@ -3,15 +3,15 @@ local P = {
     name = "acario_dark",
     theme = "dark",
 
-    bg = "#0D0E16",
-    fg = "#CEDBE5",
-    cursor = "#D85F00",
-    comment = "#767676",
+    background = "#0D0E16",
+    foreground = "#CEDBE5",
 
-    menu = "#161722",
-    visual = "#1E1E33",
-    gutter_fg = "#585C6C",
-    nontext = "#121212",
+    primary = "#D85F00",
+    secondary = "#36D8BD",
+
+    neutral = "#161722",
+    muted = "#767676",
+    grey = "#484F58",
 
     -- ANSI
     black = "#484F58",
@@ -25,12 +25,12 @@ local P = {
 
     -- Bright variants
     bright_black = "#6E7681",
-    bright_red = "#D85F00",
+    bright_red = "#FF4D5B",
     bright_green = "#2D9574",
     bright_yellow = "#F3E9C4",
-    bright_blue = "#0C213E",
+    bright_blue = "#5C95E6",
     bright_magenta = "#AB11D8",
-    bright_cyan = "#092D27",
+    bright_cyan = "#40E8CC",
     bright_white = "#FFFFFF",
 }
 

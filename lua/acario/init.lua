@@ -2,8 +2,8 @@ local M = {}
 
 ---@param colors Palette
 local function set_terminal(colors)
-    vim.g.terminal_color_background = colors.bg
-    vim.g.terminal_color_foreground = colors.fg
+    vim.g.terminal_color_background = colors.background
+    vim.g.terminal_color_foreground = colors.foreground
 
     vim.g.terminal_color_0 = colors.black
     vim.g.terminal_color_1 = colors.red
@@ -45,7 +45,6 @@ function M.load(theme)
     local palette = get_palette(theme)
     assert(palette ~= nil, "palette undefined: invalid theme name")
 
-    local h = vim.api.nvim_set_hl
     if vim.g.colors_name then
         vim.cmd("hi clear")
         vim.g.colors_name = nil

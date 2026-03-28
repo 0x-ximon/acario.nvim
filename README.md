@@ -3,7 +3,7 @@
 Port of the Emacs Doom Acario Theme.
 
 > [!WARNING]
-> This colorscheme is still in development.
+> This colorscheme is still in beta and your favorite plugin would probably not look good on it.
 
 ## Installation
 

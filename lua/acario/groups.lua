@@ -35,14 +35,17 @@ function M.load(colors)
 
         Statement = { fg = colors.red },
         Keyword = { fg = colors.red },
-        Identifier = { fg = colors.foreground },
+        Special = { fg = colors.white },
+        Quote = { fg = colors.white },
         Include = { fg = colors.magenta },
         Function = { fg = colors.yellow },
+        Identifier = { fg = colors.foreground },
         Variable = { fg = colors.foreground },
         Constant = { fg = colors.blue },
         Type = { fg = colors.blue },
         String = { fg = colors.green },
         Number = { fg = colors.foreground },
+        Boolean = { fg = colors.magenta },
         NonText = { fg = colors.background },
         Comment = { fg = colors.muted, italic = true },
 
@@ -136,6 +139,14 @@ function M.load(colors)
         ["@markup.link"] = { fg = colors.foreground, italic = true },
         ["@markup.quote.markdown"] = { fg = colors.green },
 
+        -- JSON
+        jsonQuote = { link = "Quote" },
+        jsonBraces = { link = "Special" },
+        jsonKeyword = { link = "String" },
+        jsonString = { link = "String" },
+        jsonBoolean = { link = "Boolean" },
+        jsonNumber = { link = "Number" },
+
         -- ---------------------------------------------------------------
         --                             MODULES
         -- ---------------------------------------------------------------
@@ -190,7 +201,6 @@ return M
 -- local function setup(configs)
 --     return {
 --         -- Character = { fg = colors.green },
---         -- Boolean = { fg = colors.cyan },
 --         -- Float = { fg = colors.orange },
 --         -- FloatBorder = { fg = colors.white },
 --         -- Operator = { fg = colors.blue },

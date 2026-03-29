@@ -97,8 +97,8 @@ function M.load(colors)
 
         DiagnosticError = { fg = colors.red },
         DiagnosticWarn = { fg = colors.yellow },
-        DiagnosticInfo = { fg = colors.primary },
-        DiagnosticHint = { fg = colors.secondary },
+        DiagnosticInfo = { fg = colors.blue },
+        DiagnosticHint = { fg = colors.white },
 
         DiagnosticSignError = { link = "DiagnosticError" },
         DiagnosticSignWarn = { link = "DiagnosticWarn" },
@@ -117,8 +117,8 @@ function M.load(colors)
 
         DiagnosticUnderlineError = { undercurl = true, sp = colors.red },
         DiagnosticUnderlineWarn = { undercurl = true, sp = colors.yellow },
-        DiagnosticUnderlineInfo = { undercurl = true, sp = colors.primary },
-        DiagnosticUnderlineHint = { undercurl = true, sp = colors.secondary },
+        DiagnosticUnderlineInfo = { undercurl = true, sp = colors.blue },
+        DiagnosticUnderlineHint = { undercurl = true, sp = colors.white },
 
         ["@lsp.type.type"] = { link = "@type" },
         ["@lsp.type.class"] = { link = "@class" },
@@ -231,6 +231,11 @@ function M.load(colors)
         MiniIconsPurple = { fg = colors.bright_magenta },
         MiniIconsRed = { fg = colors.red },
         MiniIconsYellow = { fg = colors.yellow },
+
+        -- mini.diff
+        MiniDiffSignAdd = { fg = colors.green },
+        MiniDiffSignChange = { fg = colors.blue },
+        MiniDiffSignDelete = { fg = colors.red },
     }
 end
 

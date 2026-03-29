@@ -464,11 +464,6 @@ return M
 --         -- LspDiagnosticsUnderlineWarning = { fg = colors.yellow, undercurl = true },
 --         -- LspDiagnosticsUnderlineInformation = { fg = colors.cyan, undercurl = true },
 --         -- LspDiagnosticsUnderlineHint = { fg = colors.cyan, undercurl = true },
---         -- LspReferenceText = { fg = colors.orange },
---         -- LspReferenceRead = { fg = colors.orange },
---         -- LspReferenceWrite = { fg = colors.orange },
---         -- LspCodeLens = { fg = colors.cyan },
---         -- LspInlayHint = { fg = "#969696", bg = "#2f3146" },
 
 --         -- --LSP Saga
 --         -- LspFloatWinNormal = { fg = colors.fg },
@@ -622,16 +617,6 @@ return M
 --         -- -- mini.indentscope
 --         -- MiniIndentscopeSymbol = { fg = "#B5629B" },
 --         -- MiniIndentscopeSymbolOff = { fg = "#B5629B" },
-
---         -- -- mini.icons
---         -- MiniIconsAzure = { fg = colors.bright_cyan },
---         -- MiniIconsBlue = { fg = colors.bright_blue },
---         -- MiniIconsCyan = { fg = colors.cyan },
---         -- MiniIconsGrey = { fg = colors.white },
---         -- MiniIconsOrange = { fg = colors.orange },
---         -- MiniIconsblue = { fg = colors.blue },
---         -- MiniIconsRed = { fg = colors.red },
---         -- MiniIconsYellow = { fg = colors.yellow },
 
 --         -- -- mini.files
 --         -- MiniFilesNormal = { fg = colors.fg, bg = colors.menu },

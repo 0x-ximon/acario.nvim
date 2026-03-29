@@ -25,12 +25,12 @@ local P = {
 
     -- Bright variants
     bright_black = "#57606A",
-    bright_red = "#D75F00",
+    bright_red = "#E65100",
     bright_green = "#009B7C",
     bright_yellow = "#8B6B00",
     bright_blue = "#2D74D7",
-    bright_magenta = "#8700AF",
-    bright_cyan = "#008B9E",
+    bright_magenta = "#7B1FA2",
+    bright_cyan = "#0077B6",
     bright_white = "#8C959F",
 }
 

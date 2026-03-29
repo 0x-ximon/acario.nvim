@@ -195,6 +195,17 @@ function M.load(colors)
         MiniStatuslineDevinfo = { fg = colors.blue, bg = colors.neutral },
         MiniStatuslineFileinfo = { fg = colors.blue, bg = colors.neutral },
         MiniStatuslineFilename = { fg = colors.white, bg = colors.background },
+
+        -- mini.icons
+        MiniIconsAzure = { fg = colors.bright_cyan },
+        MiniIconsBlue = { fg = colors.blue },
+        MiniIconsCyan = { fg = colors.cyan },
+        MiniIconsGreen = { fg = colors.green },
+        MiniIconsGrey = { fg = colors.bright_black },
+        MiniIconsOrange = { fg = colors.bright_red },
+        MiniIconsPurple = { fg = colors.bright_magenta },
+        MiniIconsRed = { fg = colors.red },
+        MiniIconsYellow = { fg = colors.yellow },
     }
 end
 

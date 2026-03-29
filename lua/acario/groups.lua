@@ -97,8 +97,8 @@ function M.load(colors)
 
         DiagnosticError = { fg = colors.red },
         DiagnosticWarn = { fg = colors.yellow },
-        DiagnosticInfo = { fg = colors.accent },
-        DiagnosticHint = { fg = colors.neutral },
+        DiagnosticInfo = { fg = colors.primary },
+        DiagnosticHint = { fg = colors.secondary },
 
         DiagnosticSignError = { link = "DiagnosticError" },
         DiagnosticSignWarn = { link = "DiagnosticWarn" },
@@ -117,8 +117,8 @@ function M.load(colors)
 
         DiagnosticUnderlineError = { undercurl = true, sp = colors.red },
         DiagnosticUnderlineWarn = { undercurl = true, sp = colors.yellow },
-        DiagnosticUnderlineInfo = { undercurl = true, sp = colors.accent },
-        DiagnosticUnderlineHint = { undercurl = true, sp = colors.neutral },
+        DiagnosticUnderlineInfo = { undercurl = true, sp = colors.primary },
+        DiagnosticUnderlineHint = { undercurl = true, sp = colors.secondary },
 
         ["@lsp.type.type"] = { link = "@type" },
         ["@lsp.type.class"] = { link = "@class" },

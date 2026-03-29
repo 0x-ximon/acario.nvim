@@ -1,0 +1,3 @@
+Acario
+colorscheme
+nvim

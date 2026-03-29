@@ -42,6 +42,11 @@ end
 
 ---@param theme Theme
 function M.load(theme)
+    if vim.fn.has("nvim-0.8") ~= 1 then
+        vim.notify("acario.nvim: you must use neovim 0.8 or higher")
+        return
+    end
+
     local palette = get_palette(theme)
     assert(palette ~= nil, "palette undefined: invalid theme name")
 

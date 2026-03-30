@@ -31,13 +31,6 @@ return {
     name = "acario",
     lazy = false,
     priority = 1000,
-    config = function()
-        require("acario").setup({})
-
-        -- Select the desired colorscheme variant
-        -- vim.cmd("colorscheme acario_light")
-        -- vim.cmd("colorscheme acario_dark")
-    end,
 }
 ```
 

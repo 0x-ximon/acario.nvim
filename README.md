@@ -2,7 +2,7 @@
 
 Port of the Emacs Doom Acario Theme.
 
-> [!WARNING] Status
+> [!WARNING]
 > This colorscheme is still in beta and your favorite plugin might not look good on it yet as I've only tested it on plugins I use. Issues and PRs are welcome!
 
 ## Screenshots
@@ -34,7 +34,7 @@ return {
 }
 ```
 
-> [!IMPORTANT] Neovim Version
+> [!IMPORTANT]
 > This colorscheme requires Neovim 0.8 or higher.
 
 ## Credits

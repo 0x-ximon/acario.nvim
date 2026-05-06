@@ -31,7 +31,7 @@ return {
 }
 ```
 
-> [!IMPORTANT] Neovim Version
+> [!IMPORTANT]
 > This colorscheme requires Neovim 0.8 or higher.
 
 ## Credits

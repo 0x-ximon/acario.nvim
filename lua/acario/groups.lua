@@ -64,6 +64,7 @@ function M.load(colors)
 
         ["@keyword"] = { link = "Keyword" },
         ["@constant"] = { link = "Constant" },
+        ["@constant.builtin"] = { link = "Constant" },
 
         ["@type"] = { link = "Type" },
         ["@type.builtin"] = { link = "Type" },
@@ -71,6 +72,7 @@ function M.load(colors)
         ["@function"] = { link = "Function" },
         ["@function.call"] = { fg = colors.foreground },
         ["@function.macro"] = { fg = colors.blue },
+        ["@function.builtin"] = { fg = colors.blue },
 
         ["@enum"] = { link = "Type" },
         ["@enumMember"] = { link = "Constant" },
@@ -145,9 +147,12 @@ function M.load(colors)
 
         -- Lua
         ["@property.lua"] = { fg = colors.foreground },
-        ["@constructor.lua"] = { fg = colors.foreground },
+        ["@constructor.lua"] = { link = "@keyword" },
         ["@lsp.type.property.lua"] = { link = "@property" },
         ["@lsp.type.parameter.lua"] = { link = "@variable.parameter" },
+
+        -- Solidity
+        ["@constructor.solidity"] = { link = "@keyword" },
 
         -- Markdown
         ["@markup.heading.1.markdown"] = { link = "Title" },
@@ -234,8 +239,13 @@ function M.load(colors)
 
         -- mini.diff
         MiniDiffSignAdd = { fg = colors.green },
-        MiniDiffSignChange = { fg = colors.blue },
         MiniDiffSignDelete = { fg = colors.red },
+        MiniDiffSignChange = { fg = colors.yellow },
+        MiniDiffOverAdd = { fg = colors.background, bg = colors.green },
+        MiniDiffOverDelete = { fg = colors.background, bg = colors.red },
+        MiniDiffOverChange = { fg = colors.background, bg = colors.yellow },
+        MiniDiffOverContext = { fg = colors.muted },
+        MiniDiffOverContextBuf = { fg = colors.muted },
     }
 end
 

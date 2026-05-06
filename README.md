@@ -2,9 +2,6 @@
 
 Port of the Emacs Doom Acario Theme.
 
-> [!WARNING] Status
-> This colorscheme is still in beta and your favorite plugin might not look good on it yet as I've only tested it on plugins I use. Issues and PRs are welcome!
-
 ## Screenshots
 
 <p align="center">
@@ -23,7 +20,7 @@ Port of the Emacs Doom Acario Theme.
 
 ## Installation
 
-If you enjoy living on the edge, you can install it via your favorite plugin manager. Here's an example using [Lazy.nvim](https://github.com/folke/lazy.nvim):
+You can install it via your favorite plugin manager. Here's an example using [Lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 return {

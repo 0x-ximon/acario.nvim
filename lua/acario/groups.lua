@@ -89,6 +89,7 @@ function M.load(colors)
         ["@string.escape"] = { fg = colors.green, bold = true },
         ["@string.special"] = { fg = colors.green, italic = true },
 
+        ["@punctuation"] = { fg = colors.foreground },
         ["@punctuation.bracket"] = { fg = colors.foreground },
         ["@punctuation.delimiter"] = { fg = colors.foreground },
 
@@ -147,7 +148,7 @@ function M.load(colors)
 
         -- Lua
         ["@property.lua"] = { fg = colors.foreground },
-        ["@constructor.lua"] = { link = "@keyword" },
+        ["@constructor.lua"] = { link = "@punctuation" },
         ["@lsp.type.property.lua"] = { link = "@property" },
         ["@lsp.type.parameter.lua"] = { link = "@variable.parameter" },
 

@@ -1,0 +1,8 @@
+{
+	"name": "Acario.nvim",
+	"summary": "Neovim Port of the Emacs Doom Acario Theme.",
+	"media": {
+		"images": ["demo_dark.png", "demo_light.png"],
+		"videos": []
+	}
+}

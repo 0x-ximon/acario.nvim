@@ -1,0 +1,28 @@
+name: Labels
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+
+    steps:
+      - name: Assign Labels from Conventional Commit Title
+        uses: bcoe/conventional-release-labels@v1
+        with:
+          type_labels: |
+            {
+              "fix": "bug",
+              "feat": "feature",
+              "test": "testing",
+              "perf": "performance",
+              "docs": "documentation",
+              "chore": "maintenance",
+              "refactor": "maintenance",
+              "breaking": "breaking"
+            }

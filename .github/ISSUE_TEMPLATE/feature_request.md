@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for acario.nvim
 title: "[FEATURE] "
-labels: enhancement
+labels: feature
 assignees: "0x-ximon"
 ---
 

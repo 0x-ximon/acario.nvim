@@ -1,4 +1,4 @@
-name: Open Issues
+name: Issues
 
 on:
   push:
@@ -15,4 +15,13 @@ jobs:
       - uses: alstr/todo-to-issue-action@v5
         with:
           AUTO_ASSIGN: "true"
-          IDENTIFIERS: '[{"name": "BUG", "labels": ["bug"]}, {"name": "WARN", "labels": ["invalid"]}, {"name": "TODO", "labels": ["enhancement"]}, {"name": "INFO", "labels": ["documentation"]}, {"name": "PERF", "labels": ["performance"]}, {"name": "TEST", "labels": ["testing"]}, {"name": "HELP", "labels": ["question"]}]'
+          IDENTIFIERS: |
+            [
+              {"name": "FIX", "labels": ["bug"]},
+              {"name": "FEAT", "labels": ["feature"]},
+              {"name": "TEST", "labels": ["testing"]},
+              {"name": "WARN", "labels": ["warning"]},
+              {"name": "PERF", "labels": ["performance"]},
+              {"name": "TODO", "labels": ["improvement"]},
+              {"name": "DOCS", "labels": ["documentation"]},
+            ]

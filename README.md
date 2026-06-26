@@ -5,7 +5,7 @@ Port of the Emacs Doom Acario Theme.
 ## Screenshots
 
 <p align="center">
-  <img src="assets/demo_light.png" alt="Light Demo">
+  <img src="media/demo_light.png" alt="Light Demo">
   <br>
   <b>acario_light</b>
 </p>
@@ -13,7 +13,7 @@ Port of the Emacs Doom Acario Theme.
 <br>
 
 <p align="center">
-  <img src="assets/demo_dark.png" alt="Dark Demo">
+  <img src="media/demo_dark.png" alt="Dark Demo">
   <br>
   <b>acario_dark</b>
 </p>

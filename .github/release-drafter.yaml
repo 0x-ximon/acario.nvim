@@ -2,38 +2,32 @@ name-template: "Acario.nvim v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
 
 categories:
-  - title: "Upgrades"
+  - title: "Major Changes"
     semver-increment: "major"
     when:
       labels:
-        - "breaking"
         - "major"
 
-  - title: "Features"
+  - title: "Minor Changes"
     semver-increment: "minor"
     when:
       labels:
-        - "feature"
         - "minor"
+        - "feature"
 
   - title: "Improvements"
     semver-increment: "patch"
     when:
       labels:
-        - "bug"
-        - "testing"
-        - "warning"
-        - "maintenance"
-        - "performance"
-        - "improvement"
-        - "documentation"
         - "patch"
-
-  - title: "Miscellaneous"
+        - "fix"
+        - "performance"
+        - "maintenance"
 
   - type: "pre-exclude"
     when:
-      label: "skip-changelog"
+      labels:
+        - "invalid"
 
 template: |
   ## What's Changed

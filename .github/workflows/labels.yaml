@@ -17,12 +17,11 @@ jobs:
         with:
           type_labels: |
             {
-              "fix": "bug",
+              "fix": "fix",
               "feat": "feature",
               "test": "testing",
               "perf": "performance",
               "docs": "documentation",
               "chore": "maintenance",
               "refactor": "maintenance",
-              "breaking": "breaking"
             }

@@ -24,14 +24,15 @@ categories:
         - "performance"
         - "maintenance"
 
+  - title: "Miscellaneous"
+
   - type: "pre-exclude"
     when:
       labels:
         - "invalid"
+        - "ignored"
 
 template: |
-  ## What's Changed
-
   $CHANGES
 
 change-template: "- $TITLE ([#$NUMBER]($URL)) by @$AUTHOR"
